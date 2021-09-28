@@ -62,7 +62,7 @@ class CachingStrategyFactory
     public function createBestCachingStrategy($sharedStringsUniqueCount, $tempFolder, $helperFactory)
     {
         if ($this->isInMemoryStrategyUsageSafe($sharedStringsUniqueCount)) {
-            return new InMemoryStrategy($sharedStringsUniqueCount);
+            //return new InMemoryStrategy($sharedStringsUniqueCount);
         }
 
         return new FileBasedStrategy($tempFolder, self::MAX_NUM_STRINGS_PER_TEMP_FILE, $helperFactory);
